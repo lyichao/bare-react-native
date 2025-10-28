@@ -1,3 +1,4 @@
+import { Alert } from 'react-native';
 import { Booking } from '../types/BookingTypes';
 import { BookingService } from '../services/BookingService';
 import { BookingStorage } from '../storage/BookingStorage';
@@ -31,9 +32,12 @@ export class BookingDataManager {
             if (cachedData) {
                 const { data: cachedBooking } = cachedData;
                 if (!isBookingExpired(cachedBooking)) {
+                    Alert.alert('使用缓存数据（未过期）');
+
                     console.log('使用缓存数据（未过期）');
                     return cachedBooking;
                 }
+                Alert.alert('缓存数据已过期，将请求新数据');
                 console.log('缓存数据已过期，将请求新数据');
             }
 
