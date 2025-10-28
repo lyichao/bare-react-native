@@ -2,11 +2,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CachedBooking, Booking } from '../types/BookingTypes';
 import { BookingError, BookingErrorType } from '../utils/ErrorTypes';
 
-// 缓存键名（常量大写蛇形命名，符合规范）
 const BOOKING_CACHE_KEY = 'BOOKING_CACHE';
 
 export const BookingStorage = {
-    // 保存到缓存（含缓存时间戳）
+    // 保存到缓存
     save: async (booking: Booking): Promise<void> => {
         try {
             const cachedData: CachedBooking = {
@@ -36,7 +35,7 @@ export const BookingStorage = {
         }
     },
 
-    // 清除缓存（供刷新机制使用）
+    // 清除缓存
     clear: async (): Promise<void> => {
         try {
             await AsyncStorage.removeItem(BOOKING_CACHE_KEY);

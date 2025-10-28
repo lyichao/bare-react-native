@@ -4,7 +4,6 @@ import { BookingStorage } from '../storage/BookingStorage';
 import { isBookingExpired } from '../utils/TimeUtils';
 import { BookingError, BookingErrorType } from '../utils/ErrorTypes';
 import { mergeBookingData } from '../utils/MergeUtils';
-import { Alert } from 'react-native';
 
 export class BookingDataManager {
     private static instance: BookingDataManager;

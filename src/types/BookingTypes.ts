@@ -20,13 +20,13 @@ export interface Booking {
   shipReference: string;
   shipToken: string;
   canIssueTicketChecking: boolean;
-  expiryTime: string; // 秒级时间戳字符串
+  expiryTime: string;
   duration: number;
   segments: Segment[];
 }
 
-// 缓存存储类型（附加缓存时间戳，用于双重校验）
+// 缓存存储类型
 export interface CachedBooking {
   data: Booking;
-  cacheTimestamp: number; // 毫秒级时间戳
+  cacheTimestamp: number; 
 }
