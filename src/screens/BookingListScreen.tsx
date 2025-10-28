@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'; 
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { bookingDataManager } from '../managers/BookingDataManager';
 import { Booking, Segment } from '../types/BookingTypes';
@@ -17,7 +17,7 @@ const BookingListScreen = () => {
         } catch (error) {
             const err = error as BookingError;
             console.log('加载失败：', err.message);
-        } 
+        }
     }, []);
 
     // 手动刷新行程数据

@@ -1,14 +1,14 @@
 export interface OriginDestination {
-    code: string;
-    displayName: string;
-    url: string;
+  code: string;
+  displayName: string;
+  url: string;
 }
 
 export interface OriginDestinationPair {
-    destination: OriginDestination;
-    destinationCity: string;
-    origin: OriginDestination;
-    originCity: string;
+  destination: OriginDestination;
+  destinationCity: string;
+  origin: OriginDestination;
+  originCity: string;
 }
 
 export interface Segment {
@@ -28,5 +28,5 @@ export interface Booking {
 // 缓存存储类型
 export interface CachedBooking {
   data: Booking;
-  cacheTimestamp: number; 
+  cacheTimestamp: number;
 }
